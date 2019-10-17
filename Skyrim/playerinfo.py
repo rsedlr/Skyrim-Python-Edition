@@ -1,3 +1,4 @@
+
 class player:
     def __init__(self, name, race, hp = 100):
         self.name = name

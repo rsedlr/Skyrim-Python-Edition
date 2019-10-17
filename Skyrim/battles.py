@@ -1,7 +1,8 @@
 from random import *
-import time , sys
 from slowprints import printslow , inputslow , separate, ps
 from playerinfo import player
+import time , sys
+
 
 #player.name = "Elfis"
 #player.race = "High Elf"
@@ -18,11 +19,13 @@ def RNG():
 
     global rng
     rng = randrange(0,100)
-        
+
+
 class dragons:
     def __init__(self, name, hp):
         self.name = name
         self.hp = hp
+
 
 def dragonbattle():
     drnum = randrange(1,10)
@@ -51,7 +54,7 @@ def dragonbattle():
     time.sleep(0.5)
     playerhp = str(playerhp)
     printslow('''You have ''' + playerhp + '''HP, and you carry a sword,
-a bow with arrows, and can cast fireball spells.''')
+                    a bow with arrows, and can cast fireball spells.''')
     playerhp = int(playerhp)
     time.sleep(0.5)
     separate()
@@ -66,6 +69,7 @@ a bow with arrows, and can cast fireball spells.''')
     time.sleep(0.5)
     printslow("The " + dragon.name + " swoops in, slashing with its claws, but they just miss.")
     separate()
+
     while True:
         time.sleep(0.5)
         
@@ -80,9 +84,9 @@ a bow with arrows, and can cast fireball spells.''')
             printslow("Fireball")
             time.sleep(0.2)
             atkans = str(input(inputslow("Attack: ")))
+
             if atkans.lower() == "sword":
                 RNG()
-                
                 if rng <= 75:
                     dragonhp = int(dragonhp - sworddmg)
                     dragonhp = str(dragonhp)
@@ -108,8 +112,7 @@ a bow with arrows, and can cast fireball spells.''')
                     playerhp = int(playerhp)
                     dmg = int(dmg)
                     break
-                     
-                    
+                        
             elif atkans.lower() == "bow":
                 RNG()
                 if rng <= 90:

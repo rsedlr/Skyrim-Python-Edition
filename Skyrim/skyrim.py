@@ -1,11 +1,10 @@
-import time , sys
 from slowprints import printslow , inputslow ,  separate, ps
 from skyrimarrays  import races , places
 from riverwood import rwevent, rwrandomevents, dragonattack
 from battles import dragonbattle
 from random import *
 from playerinfo import player
-
+import time , sys
 
 
 def RNG():
@@ -32,7 +31,6 @@ while True:             #while loop allows the code to repeat if they do not wri
 time.sleep(1)
 printslow("Dialogue: select the number next the to line you want your character to say")
 separate()
-
 
 printslow("What is your name, adventurer?")
 time.sleep(1)
